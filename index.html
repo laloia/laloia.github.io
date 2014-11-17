@@ -1,62 +1,178 @@
-<!DOCTYPE html>
+<!Doctype>
 <html>
 <head>
+<title> Earthquakes </title>
 <meta charset="UTF-8">
-<title>News Headlines</title>
-<link href="../_css/site.css" rel="stylesheet">
-<style>
-#newslinks li {
-	display: inline-block;
-	margin-right: 20px;
-}
-#newslinks li a {
-	padding: 5px 10px; 
-	background-color: white;
-	color: black !important;
-	text-decoration: none;	
-}
-#newslinks li a:hover {
-	background-color: rgb(110,138,195);
-	color: white !important;	
-}
-#headlines #newsItem {
-	margin-top: 10px;
-	padding: 20px;
-	border: 1px solid white;	
-}
-</style>
-<script src="../_js/jquery-1.7.2.min.js"></script>
+<link href="style.css" rel="stylesheet">
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDuaInbKvmpKaGVBVm0OtuaADP_CVcejv4&sensor=true"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.gomap-1.3.2.min.js"></script>
+
+<script type="text/javascript" src="js/earthquake-js.js"></script>
+
 <script>
 
-$(document).ready(function(){
-$('#newslinks a').click(function(){
-    var url =$(this).attr('href');
-    $('#headlines').load(url);
-    return false;
-    });
+
+var geocoder;
+var map;
+
+  function initial() {
+
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(41,-87);
+    var specs = {
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      zoom: 5,
+    }
+    map = new google.maps.Map(document.getElementById("map"), specs);
+    document.getElementById('address').value="";
+  }
+  
+  
+  function codeAddress() {
+    
+    //obtain the city from the textbox
+    var eAddress = document.getElementById("address").value;
+    geocoder.geocode( { 'address': eAddress}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+      
+      
+      
+	var lat=results[0].geometry.location.lat();
+	var lon=results[0].geometry.location.lng();
+	
+	
+	var north=lat+1;
+	var south=lat-1;
+	var east=lon+1;
+	var west=lon-1;
+	//var earthquakedata='http://api.geonames.org/earthquakesJSON?north=41.7745457&south=39.7745457&east=-72.9718052&west=-74.9718052&username=laloia&callback=?';
+	var url='http://api.geonames.org/earthquakesJSON?north='+north+'&south='+south+'&east='+east+'&west='+west+'&username=laloia&callback=?';
+	//alert("lat:"+lat+"lon;"+lon);
+	
+	
+	map.setCenter(results[0].geometry.location);
+	$.getJSON(url,function(data){
+	    var places=[];	
+    
+		//console.log(data);
+		for(var i=0;i<data.earthquakes.length;i++){
+			var latlng=new google.maps.LatLng(data.earthquakes[i].lat,data.earthquakes[i].lng);
+			//console.log(latlng);
+			//placing the markers on the ap according to the data returned by the geonames api
+			places[i] = new google.maps.Marker({
+			map: map, 
+			position: latlng,
+			title:'Date:'+data.earthquakes[i].datetime+'\n Magnitude:'+data.earthquakes[i].magnitude,
+			html:'\n Date and Time :\t'+data.earthquakes[i].datetime+'\n Magnitude:\t'+data.earthquakes[i].magnitude+'\n Depth: \t'+data.earthquakes[i].depth
+			});
+			//event listener to give info when clicked
+			google.maps.event.addListener(places[i], "click", function () {
+				alert(this.html);
+			});
 			
-}); // end ready
+		}
+			
+	}
+	);
+	
+	 
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+  
+	
+
 </script>
+
+
+
+<!--
+<script>
+
+
+
+$(document).ready(function() {           //create map
+    $('#map').goMap({
+        zoom : 0,
+        scaleControl : true,
+        maptype : 'SATELLITE'
+    }); // end goMap
+
+
+    var center = new google.maps.LatLng(41,-87);    //set the default location of the map to chicago
+    $.goMap.map.setCenter(center);
+
+ map = new google.maps.Map(document.getElementById("map"));
+   
+geocoder = new google.maps.Geocoder();
+
+
+}); // end ready
+
+
+var geocoder;
+
+var map;
+
+
+
+function findEarthquake(){   
+
+    function codeAddress(){
+        var eAddress = document.getElementById("city").value;
+        geocoder.geocode({'address': eAddress})
+    }
+        
+        
+    function geocodeResult(results, status){ 
+            
+        if (status == google.maps.GeocoderStatus.OK)
+        {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location});
+        }
+        else
+        {
+        alert("Geocode was not successful for the following reason:" + status);
+        }
+
+    } //end geocodeResult  
+} //end findEarthquake
+
+
+</script>
+
+-->
+
 </head>
-<body>
-<div class="wrapper">
-	<div class="header">
-		<p class="logo">JavaScript <i>&</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
-	</div>
-	<div class="content">
-		<div class="main">
-			<h1>News Headlines</h1>
-			<ul id="newslinks">
-			<li><a href="today.html">Today&#8217;s News</a></li>
-    <li><a href="yesterday.html">Yesterday&#8217;s News</a></li>
-    <li><a href="lastweek.html">Last Week&#8217;s News</a></li>
-			</ul>
-			<div id="headlines"></div>
-		</div>
-	</div>
-	<div class="footer">
-		<p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
-	</div>
-</div>
+
+<body onload="initial()">
+  <header>	
+	<h2>Earthquake Locator </h2>
+	<h4>Lauren Aloia </h4></center>
+  </header>
+  <div>
+    <input id="address" type="textbox" onkeydown="if(event.keyCode==13) codeAddress()">
+    <input id="bfind "type="button" value="Find Earthquakes" onclick="codeAddress()">
+
+  </div>
+<div id="map"></div>
 </body>
+<!--
+<body>
+<header> Earthquakes</header>
+<form action=""> City: <input type="text" id="city" value=""/></form>
+
+<button type="button" value="click to geocode" onclick="findEarthquake()"> enter</button>
+
+<div id="map"> </div>
+
+</body> -->
 </html>
