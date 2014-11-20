@@ -1,5 +1,8 @@
 
-
+p{
+    font-family: tahoma;
+    font-size:14px;
+}
 header{
     border-bottom:solid;
     margin:auto;
