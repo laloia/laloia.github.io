@@ -164,7 +164,7 @@ div#skills ul{
 
 
 #skillgrid li {
-    
+    padding-top:5px;
     float:left;
     height:100px;
     width:120px;
@@ -206,18 +206,42 @@ div#education ul, div#experience ul, div#certifications ul{
 div#education li, div#experience li, div#certifications li{
     text-align: center;
     width:300px;
-    height:100px;
+    height:110px;
     margin:20px 0px;
 }
 
 @media only screen and (max-width: 550px) {
-    div#education p, div#certifications p, div#experience p, div#skills p{
+    div#education img, div#certifications img, div#experience img, div#skills img{
         display: none;
     }
+    
+ div#skills p{
+        font-size:20px;
+        
+    }
+    
+    div#education p,  div#certifications p, div#experience p {
+        font-size:15px;
+        
+    }
+    
+    div#education li, div#experience li{
+        border-bottom:solid 1px;
+    } 
+    
+    div#skills li{
+        clear:both;
+        height:40px;
+        width:100%;
+        text-align: left;
+    } 
+    
+   
 }
 @media only screen and (max-width: 550px) {
     div#education, div#certifications, div#experience, div#skillgrid{
         margin-left:-50px;
-        
     }
+    
+    
 }
