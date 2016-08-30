@@ -165,17 +165,19 @@ div#skills ul{
 
 #skillgrid li {
     
-    border:solid 2px white;
-    border-radius:5px;
     float:left;
-    height:30px;
+    height:100px;
     width:120px;
     font-size: 13px;
     margin:auto;
     color:black;
     text-align: center;
-    /**background-color:#3c948b;**/
     font-family: "Lato";
+}
+
+#skillgrid li img{
+    height:50px;
+    
 }
 
 
@@ -192,4 +194,30 @@ div#education p{
 div#certifications p{
     font-size:13px;
     
+}
+
+
+
+div#education ul, div#experience ul, div#certifications ul{
+    
+    list-style:none;
+}
+
+div#education li, div#experience li, div#certifications li{
+    text-align: center;
+    width:300px;
+    height:100px;
+    margin:20px 0px;
+}
+
+@media only screen and (max-width: 550px) {
+    div#education p, div#certifications p, div#experience p, div#skills p{
+        display: none;
+    }
+}
+@media only screen and (max-width: 550px) {
+    div#education img, div#certifications img, div#experience img, div#skillgrid img{
+        display:inline-grid;
+        
+    }
 }
