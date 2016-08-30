@@ -69,8 +69,8 @@ div#main_title img{
 .main-button{
     
    background-color:#3c948b;
-   width:120px;
-   height:40px;   
+   width:125px;
+   height:50px;   
    border-radius:6px;
   
   box-shadow: 0 5px #666;
@@ -78,7 +78,7 @@ div#main_title img{
    
 }
 
-.main-button a{
+a.main-button {
     
     text-decoration: none;
     color:white;
