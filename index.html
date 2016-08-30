@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Lato|Petit+Formal+Script|Satisfy|Yellowtail" rel="stylesheet">
+   <title></title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v3.0.3.js"></script>
+    <script src="js/blog.js"></script>  
+    <script src="js/projects.js"></script>
+    <script src="js/myjs.js"></script>
+      
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/custom_style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="home_main">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+  
+      <!-- start collapsed navbar-->
+      <div class="navbar-header" id="mynavheader">
+       <img id="logo" src="logo-la-4.png"/> <button 
+        type="button" 
+        class="navbar-toggle collapsed" 
+        data-toggle="collapse" 
+        data-target="#main_navbar" 
+        aria-expanded="false">
+		 <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+		</button>
+      </div><!-- / collapsed navbar-->
+
+      <!-- start un-collapsed navbar-->
+      <div 
+         class="collapse navbar-collapse" 
+         id="main_navbar">
+        <ul class="nav navbar-nav navbar-right" id="mynavcss" >
+          <li role="" class="active" id="home-page"><a href="#">Home</a></li>
+          <li role="" id="cvbtn"><a href="#">CV</a></li>
+          <li role="" class="projectsbtn"><a href="#" >Projects</a></li>
+		  <li role="" id="blogbtn"><a href="#">Blog</a></li>
+        </ul>
+      </div><!-- / un-collapsed navbar-->
+
+    </div> <!-- /container -->
+  </nav>
+      
+      
+<!---END NAV-->      
+
+      <div id="content" class="container-fluid" role="main">
+      </div>
+      
+    
+        <center><div class="panel-footer">Lauren Aloia &copy; 2016</div></center>
+        
+
+
+<!--PROJECTS TEMPLATE-->
+      <script id="projects-template" type="text/x-handlebars-template">
+{{#each project}}
+    <div class="container-fluid">
+        <h3>{{name}}</h3>
+        <p>{{details}}</p>
+       <img style="width:100%" src="{{src}}"/>
+    </div>
+{{/each}}
+      </script>
+      
+      
+<!--BLOG TEMPLATE-->      
+<script id="blog-template" type="text/x-handlebars-template">
+<div class="container-fluid">
+{{#each blog}}
+    <div class="col-md-8 blog-post">
+        <h3 class="blog_title">{{title}}</h3>
+        <p>{{content}}</p>
+        <p>{{date}}</p>
+    </div>   
+
+{{/each}}
+    </div>
+</script>
+      
+<!--HOME TEMPLATE-->
+      
+<script id="home-template" type="text/x-handlebars-template">
+  
+   <center id="main">
+       <div id="main_title">
+			<h1>I am Lauren.</h1><br/>
+           <!-- <img src="images/cover4.jpeg" alt=""/>-->
+            <h4>A web designer & developer</h4>    <br/>
+       <button class="main-button"> <a class="aboutbtn" href="index.html#aboutlauren" role="button">Read More</a></button>
+    </div> </center>
+
+<center><div id="aboutlauren">
+    <h3>About Me</h3>
+    <img src="headshot.png" alt="Lauren Aloia"/><br/><br/>
+    <p>I was born and raised in the Chicago area and currently live downtown. I graduated from the University of Illnois Champaign-Urbana in 2011 with a bachelor's degree in Communication, focusing on the media and technology. It wasn't until after graduation when I really started to pursue coding and design. I took several courses focusing on HTML, CSS, Javascript/JQuery, and Java. I utilized as many web resources as I could to learn new skills. In 2015, I started Georgia Tech's Online Master's of Science in Computer Science (OMSCS) program and am expected to graduate in 2019.
+    <br/><br/>
+    For the past 2.5 years, I've worked for a medical society as an instructional designer. My latest project involved designing a Learning Management System (LMS).  To do this, I gathered the requirements, wrote the scope of work, and created the wireframes for the developers.  Now that the LMS is live, I continue to upgrade and design new features for the system.  
+    <br/><br/>
+    I love learning about new technology, techniques, and design.  This site will serve as a showcase for my work, and also a blog to share my thoughts. 
+        
+        
+    </p>
+    </div></center>
+   
+</script><!--end home template-->
+
+<!--start RESUME-->
+<script id="resume-template" type="text/x-handlebars-template">     
+<div id="resume" class="body">
+
+    <h3>Lauren Aloia's Resume </h3>
+   
+		<div class="panel-group" id="accordion">
+		    <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title">
+                        <a 
+			             data-toggle="collapse" 
+			             data-parent="accordion"
+			             href="#skills">Skills
+		                  </a>
+                    </h4>
+		    </div><!--end panel-heading-->
+                
+		    <div id="skills" class="panel-collapse collapse in">
+                <div class="panel-body" style="padding:0px;"> 
+                        <div class="container-fluid" style="padding:0px;" >
+                            <ul id="skillgrid" style="padding:0px;">
+                            <div class="row">
+                            <div class="col-xs-12">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>JQuery</li>
+                                <li>Bootstrap</li>
+                                <li>Handlebars</li>
+                                <li>Wordpress</li>
+                                <li>Moodle</li>
+                                <li>Wireframes</li>
+                                <li>Java</li>
+                                <li>UML Diagrams</li>
+                                <li>Statecharts</li>
+                                <li>Gurobi</li>
+                                <li>Microsoft Word</li>
+                                <li>Microsoft Excel</li>
+                                <li>Powerpoint</li>
+                                <li>Adobe</li>
+                  
+                            </div>
+    </div></ul>
+                        </div>
+                        </div>
+                        
+                       
+                    
+                </div>
+		    </div>
+		        </div>
+            
+		  <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title">
+                        <a 
+			             data-toggle="collapse" 
+			             data-parent="accordion"
+                         href="#experience"> Experience
+                        </a>
+                    </h4>
+                </div><!--end panel-heading-->
+            <div id="experience" class="panel-collapse collapse in">
+		        <div class="panel-body"> 
+                    <p><i>Instructional Designer</i> - Society of Thoracic Surgeons<br/>
+                        November 2013 - Present</p>
+                    <p><i>Summer Teaching Assistant</i> - Georgia Institute of Technology<br/>
+                        May 2016- August 2016</p>
+                    <p><i>Digital Media and Marketing Manager</i> - Kahntact USA<br/>
+                        August 2013- November 2013</p>
+                </div>
+		    </div>
+		  </div>
+		        
+		        
+		  <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title">
+                        <a 
+                           data-toggle="collapse" 
+                           data-parent="accordion"
+			               href="#education">Education
+                        </a>
+                    </h4>
+		    </div><!--end panel-heading-->
+		    <div id="education" class="panel-collapse collapse in">
+		        <div class="panel-body"> 
+    
+                <p>Georgia Institute of Technology<br/>
+                    Master of Science, Computer Science<br/>
+                    August 2015- May 2019 (expected)</p>
+                
+                <p>Harper College<br/>
+                Web Maintenance and Design<br/>
+                2013</p>  
+                    
+                <p>University of Illinois, Champaign-Urbana<br/>
+                    Bachelor of Arts, Communication</p>
+    
+    
+    </div>
+		      </div>
+		  </div>
+    
+    
+    
+    
+     <div class="panel panel-default">
+		        <div class="panel-heading">
+		            <h4 class="panel-title">
+                        <a 
+                           data-toggle="collapse" 
+                           data-parent="accordion"
+			               href="#certifications">Certifications
+                        </a>
+                    </h4>
+		    </div><!--end panel-heading-->
+		    <div id="certifications" class="panel-collapse collapse in">
+		        <div class="panel-body"> 
+    
+                    <p>Responsive Web Design<br/>
+                    Coursera Course Certificates<br/>
+                    August 2016<br/>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/EPG6AS3YEGJ5" target="_blank">Click here for certificate</a>   </p>
+                
+    
+    
+    </div>
+		      </div>
+		  </div>
+		    
+		    
+		</div><!--end panel-default-->
+			
+	  </div> <!--end panel-group-->
+      
+<center><a href="https://www.linkedin.com/in/lauren-aloia-85848224
+    " target="_blank";><img src="images/linkedin.png" alt="linkedin icon" style="height:40px;"/></a><br/>Connect with me.</center><br/><br/>
+      <!--END RESUME-->
+      </script>
+	
+		
+
+  </body>
+</html>

@@ -1,0 +1,195 @@
+
+
+body{
+   
+   /** background-color: #e1e3e4;**/
+    background-color:white;
+   
+   
+}
+
+div.panel-footer{
+    
+    background-color:white;
+    
+}
+
+h1, h2, h3, h4, h5, h6, p, body, div, span{
+    
+   font-family: "Lato"; 
+    
+    
+}
+
+img#logo{
+    height:65px;
+    
+    
+}
+
+center#main{
+    
+    background-image:url('../images/cover5.jpeg'); 
+    height:500px;
+    background-repeat: no-repeat;
+    background-position: center;   
+    
+}
+
+center div#main_title{
+    padding:10px;
+    
+    
+}
+
+div#main_title {
+    
+    width:80%;
+    margin:auto;
+    margin-top:50px;
+
+}
+
+div#main_title h4, div#main_title h1{
+    
+    font-family: "Petit Formal Script";
+   
+}
+
+
+
+div#main_title img{
+    
+    border-radius:70%;
+    height:200px;
+    opacity: 0.5;
+}
+
+
+.main-button{
+    
+   background-color:#3c948b;
+   width:120px;
+   height:40px;   
+   border-radius:6px;
+  
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+   
+}
+
+.main-button a{
+    
+    text-decoration: none;
+    color:white;
+}
+
+.main-button:hover{
+    
+    background-color: #4cb7ac;
+    
+ 
+}
+
+div#aboutlauren{
+    margin-top:200px;
+    margin-left:-20px;
+    margin-right:-20px;
+    padding:20px;
+    background-color:#ededed;
+    
+}
+
+div#aboutlauren p{
+    
+   color:#3c948b;
+   font-family: "Lato";
+   padding:20px 40px;
+}
+
+
+
+div#aboutlauren h3{
+    font-family: "Petit Formal Script";
+}
+
+div#aboutlauren img{
+    
+    height:200px;
+    border-radius: 50%;
+}
+
+
+
+ul#mynavcss li a{
+    
+    color:black;
+}
+
+ul#mynavcss li{
+   text-align: right;
+    
+}
+
+
+.blog-post{
+    
+    margin:20px;
+    
+}
+
+
+/**Resume CSS**/
+
+div#resume h3{
+    font-family:"petit formal script";
+    font-weight: 90;
+    font-size:20px;
+    padding:10px;
+    
+}
+
+div#resume h4{
+    font-family:"Lato";
+   font-size:90%;
+    
+}
+
+
+div#skills ul{
+    list-style: none;
+    
+}
+
+
+
+#skillgrid li {
+    
+    border:solid 2px white;
+    border-radius:5px;
+    float:left;
+    height:30px;
+    width:120px;
+    font-size: 13px;
+    margin:auto;
+    color:black;
+    text-align: center;
+    /**background-color:#3c948b;**/
+    font-family: "Lato";
+}
+
+
+div#experience p{
+    font-size:13px;
+    
+}
+
+div#education p{
+    font-size:13px;
+    
+}
+
+div#certifications p{
+    font-size:13px;
+    
+}
