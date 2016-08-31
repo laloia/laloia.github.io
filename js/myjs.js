@@ -1,7 +1,21 @@
 
 $(document).ready(function(){
         
+function ToggleBlogTOC(){
+	
+	if ($("#posts").is(":visible")== true){
+		$("#posts").hide();	
+		$("#blog-collapse").html("Blog Posts ^");
+	}else{
+		$("#posts").show();	
+		$("#blog-collapse").html("Blog Posts >");
+	
+	}
 
+}
+
+		
+		
 /**compile templates**/    
 
       var source= $("#blog-template").html();
@@ -16,16 +30,32 @@ $(document).ready(function(){
       source=$("#home-template").html();
       var home_template=Handlebars.compile(source);
       
-      
+       source=$("#sidebar-template").html();
+      var sidebar_template=Handlebars.compile(source);
 
    $("#blogbtn").click(function (){
        
         var html= blog_template(blog_data);
         $("#content").html(html);
-        
+		
+		html= sidebar_template(blog_data);
+		$("#sidebar").html(html);
+        $("#sidebar").show();
     
         $(".navbar-nav .active").removeClass("active");
         $("#blogbtn").addClass("active");
+		var blog_width = $(".blog-template").width();
+		$("#content").width(blog_width);
+		
+		
+		
+			$("#blog-collapse").click(function(){
+				
+				ToggleBlogTOC();
+	
+			});
+    
+		
     
     });   
       
@@ -38,6 +68,7 @@ $(document).ready(function(){
         
         $(".navbar-nav .active").removeClass("active");
         $("#projectsbtn").addClass("active");
+		$(".sidebar-right").hide();
         
         
         
@@ -46,7 +77,7 @@ $(document).ready(function(){
     $("#home-page").click(function(){
          var html= home_template();
         $("#content").html(html);
-      
+        $("#sidebar").hide();
         
         $(".navbar-nav .active").removeClass("active");
         $("#home-page").addClass("active");
@@ -71,7 +102,7 @@ $(document).ready(function(){
     $("#cvbtn").click(function(){
         var html= resume_template();
         $("#content").html(html);    
-     
+         $("#sidebar").hide();
      
         
         $(".navbar-nav .active").removeClass("active");
@@ -79,7 +110,8 @@ $(document).ready(function(){
         
         
     });
-    
+	
+	
    
     
     
