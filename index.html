@@ -26,7 +26,7 @@
   </head>
   <body class="home_main">
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
   
       <!-- start collapsed navbar-->
@@ -62,16 +62,31 @@
       
 <!---END NAV-->      
 
+<!--SIDE-BAR-->	   
+	   <div>
+	   
+	  
+		
+	   </div>
+	   <div id="sidebar"></div>
+	  
+ 
+	
+	  
+	  
+<!--CONTENT-->	  
       <div id="content" class="container-fluid" role="main">
       </div>
+	  
       
-    
+ <!--FOOTER-->
         <center><div class="panel-footer">Lauren Aloia &copy; 2016</div></center>
         
 
 
 <!--PROJECTS TEMPLATE-->
       <script id="projects-template" type="text/x-handlebars-template">
+	  
 {{#each project}}
     <div class="container-fluid">
         <h3>{{name}}</h3>
@@ -84,17 +99,33 @@
       
 <!--BLOG TEMPLATE-->      
 <script id="blog-template" type="text/x-handlebars-template">
-<div class="container-fluid">
+<div class="container-fluid blog-section">
 {{#each blog}}
     <div class="col-md-8 blog-post">
-        <h3 class="blog_title">{{title}}</h3>
+        <h3 class="blog_title" id="{{title}}-post">{{title}}</h3>
+		<p>{{date}}</p>
         <p>{{content}}</p>
-        <p>{{date}}</p>
     </div>   
-
 {{/each}}
     </div>
 </script>
+
+
+<!--SIDEBAR TEMPLATE-->
+
+ <script id="sidebar-template" type="text/x-handlebars-template">		
+	
+	 <div class="sidebar-right" id="sidebar-right">
+	<div class="title"> <h4 id="blog-collapse">Blog Posts >>></h4></div>
+		<div id="posts">
+		{{#each blog}}
+			<div class="post">
+				<a href="index.html#{{title}}-post"><h5>{{title}}</h5></a>
+			<div class="post">
+		{{/each}}
+	  </div>
+	  </div>
+	  </script>
       
 <!--HOME TEMPLATE-->
       
