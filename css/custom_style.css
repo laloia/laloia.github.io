@@ -82,6 +82,7 @@ a.main-button {
     
     text-decoration: none;
     color:white;
+    height:70px;
 }
 
 .main-button:hover{
