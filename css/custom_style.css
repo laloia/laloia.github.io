@@ -241,7 +241,7 @@ div#education li, div#experience li, div#certifications li{
 }
 @media only screen and (max-width: 550px) {
     div#education, div#certifications, div#experience, div#skillgrid{
-        margin-left:-50px;
+        margin-left:-70px;
     }
     
     
