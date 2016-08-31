@@ -4,13 +4,16 @@ body{
    
    /** background-color: #e1e3e4;**/
     background-color:white;
-   
+   padding-top: 80px;
    
 }
+
+
 
 div.panel-footer{
     
     background-color:white;
+	clear:both;
     
 }
 
@@ -46,7 +49,7 @@ div#main_title {
     
     width:80%;
     margin:auto;
-    margin-top:30px;
+	clear:both;
 
 }
 
@@ -64,7 +67,7 @@ div#main_title img{
     height:200px;
     opacity: 0.5;
 }
-
+/**Button CSS**/
 
 .main-button{
 height:25px;
@@ -98,7 +101,7 @@ div#aboutlauren{
     margin-top:200px;
     margin-left:-20px;
     margin-right:-20px;
-    padding:20px;
+    padding:80px;
     background-color:#ededed;
     
 }
@@ -135,11 +138,7 @@ ul#mynavcss li{
 }
 
 
-.blog-post{
-    
-    margin:20px;
-    
-}
+
 
 
 /**Resume CSS**/
@@ -240,7 +239,7 @@ div#education li, div#experience li, div#certifications li{
         clear:both;
         height:40px;
         width:100%;
-        text-align: left;
+        text-align: left;f
     } 
 	
 	div#main_title{
@@ -250,3 +249,82 @@ div#education li, div#experience li, div#certifications li{
    
 }
 
+/**Blog CSS**/
+
+/**.sidebar-right{**/
+#posts{
+position:fixed;
+right:0;
+width: 20%;
+height:100%;
+background-color: #3c948b;
+color: white;
+
+padding-left:3px;
+border-radius:10px;
+
+
+}
+.post{
+width:100%;
+vertical-align: middle;
+height:30px;
+
+}
+
+
+.sidebar-right a{
+text-decoration:none;
+color:white;
+}
+.sidebar-right a:hover{
+color:black;
+}
+
+.sidebar-right h5{
+
+font-family:"lato";
+font-size:16px;
+font-weight:normal;
+text-align:right;
+
+}
+.sidebar-right .title
+{
+border-bottom:solid 2px white;
+
+}
+
+
+.title h4{
+
+font-family:"lato";
+font-size:20px;
+font-weight:normal;
+color: black;
+clear:both;
+margin:0px 0px 5px;
+text-align:right;
+
+
+}
+
+button#blog-collapse{
+background-color:white;
+border:1px;
+height:30px;
+
+}
+
+
+#blog-template, .blog-section{
+float:left;
+width:80%;
+}
+
+.blog-post{
+    
+    margin:20px;
+	
+    
+}
