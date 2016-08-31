@@ -67,22 +67,24 @@ div#main_title img{
 
 
 .main-button{
-    
+height:25px;
    background-color:#3c948b;
-   width:125px;
-   height:70px;   
+   width:100px;
+     
    border-radius:6px;
   
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(4px);    
+
    
 }
+
 
 a.main-button {
     
     text-decoration: none;
     color:white;
-    height:70px;
+    
 }
 
 .main-button:hover{
