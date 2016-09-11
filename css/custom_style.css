@@ -73,9 +73,7 @@ div#main_title img{
 height:25px;
    background-color:#3c948b;
    width:100px;
-     
    border-radius:6px;
-  
   box-shadow: 0 5px #666;
   transform: translateY(4px);    
 
@@ -251,6 +249,7 @@ div#education li, div#experience li, div#certifications li{
 
 /**Blog CSS**/
 
+
 /**.sidebar-right{**/
 #posts{
 position:fixed;
@@ -259,9 +258,9 @@ width: 20%;
 height:100%;
 background-color: #3c948b;
 color: white;
-
+margin-top:25px;
 padding-left:3px;
-border-radius:10px;
+
 
 
 }
@@ -272,6 +271,10 @@ height:30px;
 
 }
 
+.sidebar-right{
+    
+    margin-top:-14px;
+}
 
 .sidebar-right a{
 text-decoration:none;
@@ -292,21 +295,42 @@ text-align:right;
 .sidebar-right .title
 {
 border-bottom:solid 2px white;
+font-size: 18px;
+position:fixed;
+z-index: 14;
 
 }
 
+.title{
+float:right;
+width:20%;
+background-color:#3c948b;
+color:white;
 
-.title h4{
+    
+}
 
-font-family:"lato";
-font-size:20px;
-font-weight:normal;
-color: black;
-clear:both;
-margin:0px 0px 5px;
-text-align:right;
-
-
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+  right:0;
+  height:25px;
+  width:20%;
+  text-align: center;
+  
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 
+  0 0.25em 0 0 white,
+  0 0.5em 0 0 white;
+  z-index:12;
 }
 
 button#blog-collapse{
@@ -326,5 +350,55 @@ width:80%;
     
     margin:20px;
 	
+    
+}
+
+
+
+@media only screen and (max-width: 550px) {
+    
+    #posts{
+position:fixed;
+right:0;
+width: 90%;
+height:100%;
+background-color: #3c948b;
+color: white;
+margin-top:25px;
+padding-left:3px;
+z-index: 13;
+
+
+
+}
+.post{
+width:90%;
+vertical-align: middle;
+height:50px;
+
+}
+
+.sidebar-right{
+    margin-top:-12px;
+}
+
+.sidebar-right h5{
+font-size:20px;
+text-align:left;
+
+}
+.sidebar-right .title{
+font-size: 22px;
+position:fixed;
+}
+
+#blog-collapse{
+width:90%;
+}
+
+
+
+
+    
     
 }
