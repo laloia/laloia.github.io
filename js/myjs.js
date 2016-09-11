@@ -5,10 +5,11 @@ function ToggleBlogTOC(){
 	
 	if ($("#posts").is(":visible")== true){
 		$("#posts").hide();	
-		$("#blog-collapse").html("Blog Posts ^");
+		$("#blog-collapse").html("Blog Posts");
+      
 	}else{
 		$("#posts").show();	
-		$("#blog-collapse").html("Blog Posts >");
+		$("#blog-collapse").html("Blog Posts");
 	
 	}
 
