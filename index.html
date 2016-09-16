@@ -78,6 +78,9 @@
       <div id="content" class="container-fluid" role="main">
       </div>
 	  
+	  <div id="content-resume" class="container-fluid" role="main">
+      </div>
+	  
       
  <!--FOOTER-->
         <center><div class="panel-footer">Lauren Aloia &copy; 2016</div></center>
@@ -86,14 +89,18 @@
 
 <!--PROJECTS TEMPLATE-->
       <script id="projects-template" type="text/x-handlebars-template">
-	  
+		<div id="projects-page">
+			<h3> Projects</h3>
+		</div>
+<div style="text-align:center; ">		
 {{#each project}}
-    <div class="container-fluid">
-        <h3>{{name}}</h3>
+    <div class="container-fluid project-div" style="width:390px; display:inline-block; margin:20px; ">
+		<img class="proj-img" src="{{img}}"></img>
+        <h4>{{name}}</h4>
         <p>{{details}}</p>
-       <img style="width:100%" src="{{src}}"/>
     </div>
 {{/each}}
+</div>
       </script>
       
       
