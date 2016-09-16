@@ -1,5 +1,9 @@
 
 $(document).ready(function(){
+
+
+
+
         
 function ToggleBlogTOC(){
 	
@@ -35,7 +39,8 @@ function ToggleBlogTOC(){
       var sidebar_template=Handlebars.compile(source);
 
    $("#blogbtn").click(function (){
-       
+		$("#content").show();
+		$("#content-resume").hide();
         var html= blog_template(blog_data);
         $("#content").html(html);
 		
@@ -62,8 +67,8 @@ function ToggleBlogTOC(){
       
     
     $(".projectsbtn").click(function(){
-        
-        
+				$("#content").show();
+         $("#content-resume").hide();
         var html= projects_template(projects);
         $("#content").html(html);    
         
@@ -76,9 +81,11 @@ function ToggleBlogTOC(){
     });
     
     $("#home-page").click(function(){
+		$("#content").show();
          var html= home_template();
         $("#content").html(html);
         $("#sidebar").hide();
+		  $("#content-resume").hide();
         
         $(".navbar-nav .active").removeClass("active");
         $("#home-page").addClass("active");
@@ -91,6 +98,7 @@ function ToggleBlogTOC(){
         
                  $(".navbar-nav .active").removeClass("active");
                 $("#projectsbtn").addClass("active");
+		
         
         
         
@@ -101,9 +109,11 @@ function ToggleBlogTOC(){
     
 
     $("#cvbtn").click(function(){
+		$("#content-resume").show();
         var html= resume_template();
-        $("#content").html(html);    
+        $("#content-resume").html(html);    
          $("#sidebar").hide();
+		 $("#content").hide();
      
         
         $(".navbar-nav .active").removeClass("active");
@@ -113,7 +123,7 @@ function ToggleBlogTOC(){
     });
 	
 	
-   
+
     
     
      $("#home-page").click();
