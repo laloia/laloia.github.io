@@ -70,7 +70,7 @@ div#main_title img{
 /**Button CSS**/
 
 .main-button{
-height:25px;
+height:30px;
    background-color:#3c948b;
    width:100px;
    border-radius:6px;
@@ -154,7 +154,12 @@ div#resume h4{
    font-size:90%;
     
 }
+ @media only screen and (min-width:800px){
+	div#content-resume{
+		width:800px;
 
+	}
+}
 
 div#skills ul{
     list-style: none;
@@ -246,6 +251,33 @@ div#education li, div#experience li, div#certifications li{
     
    
 }
+
+/*Projects CSS*/
+
+div#projects-page h3{
+	font-family:"petit formal script";
+	text-align:center;
+}
+img.proj-img{
+height:238px; 
+width:350px; 
+border-radius:20px; 
+box-shadow: 10px 10px 5px #888888;
+}
+
+div.project-div h4,p{
+text-align:center;
+
+}
+
+div.project-div h4{
+padding-top:9px;
+}
+
+
+
+
+
 
 /**Blog CSS**/
 
@@ -352,6 +384,16 @@ width:80%;
 	
     
 }
+@media only screen and (min-width: 800px){
+center#main{
+    
+    background-image:url('../images/cover5.jpeg'); 
+	background-size:1000px;
+    height:800px;
+    background-repeat: no-repeat;
+    background-position: top;  
+
+}
 
 
 
@@ -397,8 +439,12 @@ width:90%;
 }
 
 
-
-
-    
     
 }
+
+
+
+
+
+
+
