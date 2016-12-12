@@ -64,16 +64,9 @@
 
 <!--SIDE-BAR-->	   
 	   <div>
-	   
-	  
-		
 	   </div>
 	   <div id="sidebar"></div>
-	  
- 
-	
-	  
-	  
+
 <!--CONTENT-->	  
       <div id="content" class="container-fluid" role="main">
       </div>
@@ -94,13 +87,44 @@
 		</div>
 <div style="text-align:center; ">		
 {{#each project}}
-    <div class="container-fluid project-div" style="width:390px; display:inline-block; margin:20px; ">
-		<img class="proj-img" src="{{img}}"></img>
+    <div class="container-fluid project-div"  style="width:390px; display:inline-block; margin:20px; ">
+        <a class="projectdetailbtn" data-id="{{@index}}" href="#"><img class="proj-img" src="{{img}}"/></a>
         <h4>{{name}}</h4>
         <p>{{details}}</p>
     </div>
 {{/each}}
 </div>
+      </script>
+      
+<!--PROJECT DETAIL TEMPLATE-->
+      <script id="project-detail-template" type="text/x-handlebars-template">
+		   <div id="project-detail-page">
+			   <h3> Project Details</h3>
+               <h4> {{name}}</h4>
+               <p>{{details}}</p>
+               <img src="{{img}}"/><br/>
+               {{#if img2}}
+               <img src="{{img2}}"/> 
+               {{/if}}
+               {{#if img3}}
+               <img src="{{img3}}"/>
+               {{/if}}
+               {{#if img4}}
+               <img src="{{img4}}"/>
+               {{/if}}
+               {{#if img5}}
+               <img src="{{img5}}"/>
+               {{/if}}
+               {{#if downloadable}}
+              <br/> <a target="_blank" href="{{downloadable}}">Click to view the original project proposal</a>
+               {{/if}}
+               {{#if downloadable2}}
+               <br/><a target="_blank" href="{{downloadable2}}">Click to view the project presentation</a>
+               {{/if}}
+                {{#if downloadable3}}
+               <br/><a target="_blank" href="{{downloadable3}}">Click to view the ERAS manual</a>
+               {{/if}}
+		   </div>
       </script>
       
       

@@ -275,6 +275,22 @@ padding-top:9px;
 }
 
 
+/*Project Details CSS*/
+
+div#project-detail-page{
+    text-align: center;
+}
+
+div#project-detail-page h3{
+	font-family:"petit formal script";
+	text-align:center;
+}
+
+div#project-detail-page img{
+    margin:10px;
+    width:35%;
+    border:1px solid #acacac;
+}
 
 
 

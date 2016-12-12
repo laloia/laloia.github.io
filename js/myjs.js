@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+var current_project= projects.project[0];
 
 
 
@@ -37,6 +38,9 @@ function ToggleBlogTOC(){
       
        source=$("#sidebar-template").html();
       var sidebar_template=Handlebars.compile(source);
+    
+     source=$("#project-detail-template").html();
+      var project_detail_template=Handlebars.compile(source);
 
    $("#blogbtn").click(function (){
 		$("#content").show();
@@ -80,6 +84,9 @@ function ToggleBlogTOC(){
         
     });
     
+    
+    
+    
     $("#home-page").click(function(){
 		$("#content").show();
          var html= home_template();
@@ -91,20 +98,17 @@ function ToggleBlogTOC(){
         $("#home-page").addClass("active");
         
              $(".projectsbtn").click(function(){
-        
-        
                  var html= projects_template(projects);
                 $("#content").html(html);    
-        
                  $(".navbar-nav .active").removeClass("active");
-                $("#projectsbtn").addClass("active");
-		
-        
-        
-        
-    });
-        
-        
+                $(".projectsbtn").addClass("active");
+                 
+
+                     $(".projectdetailbtn").click(function(){
+                        var index = $(this).data("id");
+				        showProject(index);
+                        });
+             });
     });
     
 
@@ -127,4 +131,16 @@ function ToggleBlogTOC(){
     
     
      $("#home-page").click();
+    
+    
+    function showProject(index){
+    current_project=projects.project[index];
+    var html= project_detail_template(current_project);
+    $('#content').html(html);
+    $(".navbar-nav .active").removeClass("active");
+    $(".projectsbtn").addClass("active");
+    $(".sidebar-right").hide();
+        
+    };
 });
+
