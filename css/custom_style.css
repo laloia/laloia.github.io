@@ -70,12 +70,13 @@ div#main_title img{
 /**Button CSS**/
 
 .main-button{
-height:30px;
+   height:35px;
    background-color:#3c948b;
    width:100px;
    border-radius:6px;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);    
+   /* box-shadow: 0 5px #666;*/
+   transform: translateY(4px);  
+   padding-top:5px;
 
    
 }
@@ -259,10 +260,11 @@ div#projects-page h3{
 	text-align:center;
 }
 img.proj-img{
+text-align: center;
 height:238px; 
 width:350px; 
-border-radius:20px; 
-box-shadow: 10px 10px 5px #888888;
+border-radius:10px; 
+box-shadow: 10px 5px 5px #888888;
 }
 
 div.project-div h4,p{
@@ -410,7 +412,8 @@ center#main{
     background-position: top;  
 
 }
-
+ 
+}
 
 
 @media only screen and (max-width: 550px) {
@@ -452,6 +455,18 @@ position:fixed;
 
 #blog-collapse{
 width:90%;
+}
+    
+   div#project-detail-page img{
+    margin:5px;
+    width:90%;
+    border:1px solid #acacac;
+}
+    
+    img.proj-img{
+        text-align: center;
+        width:90%; 
+
 }
 
 
