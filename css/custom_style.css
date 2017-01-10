@@ -237,13 +237,14 @@ div#education li, div#experience li, div#certifications li{
     
     div#education li, div#experience li{
         border-bottom:solid 1px #dcdcdc;
+		
     } 
     
     div#skills li{
         clear:both;
         height:40px;
         width:100%;
-        text-align: left;f
+        text-align: left;
     } 
 	
 	div#main_title{
@@ -258,6 +259,7 @@ div#education li, div#experience li, div#certifications li{
 div#projects-page h3{
 	font-family:"petit formal script";
 	text-align:center;
+	padding-bottom:15px;
 }
 img.proj-img{
 text-align: center;
@@ -267,14 +269,45 @@ border-radius:10px;
 box-shadow: 10px 5px 5px #888888;
 }
 
-div.project-div h4,p{
-text-align:center;
-
-}
-
 div.project-div h4{
-padding-top:9px;
+text-align:left;
+
 }
+
+
+div table h4{
+font-size:.9em;
+}
+
+div table th{
+background-color:#3c948b;
+color:white;
+
+}
+
+div.project-div table, th, td{
+
+	border: 1px solid gray;
+	padding:10px;
+
+}
+
+tr:nth-child(odd) {
+    background-color: #dcdcdc;
+}
+
+div table td a {
+color:black;
+
+text-decoration:underline;
+
+}
+
+div table td a h4{
+font-weight:lighter;
+
+}
+
 
 
 /*Project Details CSS*/
@@ -293,6 +326,7 @@ div#project-detail-page img{
     width:35%;
     border:1px solid #acacac;
 }
+
 
 
 
