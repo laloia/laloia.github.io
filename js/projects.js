@@ -4,6 +4,8 @@ var projects ={
     
         {
 		img: "images/lms.png",
+		img2:"images/lms2.png",
+		img3:"images/lms3.png",
         name: "Custom LMS", 
         details: "Requirements gathering, UX design, content creation, testing ", 
 		
@@ -11,8 +13,10 @@ var projects ={
     
         }, {
 		img: "images/gitbook.png",
+		img2: "images/gitbook2.png",
+		img3: "images/gitbook3.png",
         name: "e-Books Created With Gitbook", 
-        details: "Project management, content creation, Markdown/HTML/CSS", 
+        details: "Project management, content creation, Markdown/HTML/CSS/JavaScript", 
        
     
         },{

@@ -91,19 +91,18 @@
 
 <!--PROJECTS TEMPLATE-->
       <script id="projects-template" type="text/x-handlebars-template">
+			
 		<div id="projects-page">
+	
 			<h3> Projects</h3>
 		</div>
 <div>
 <table>	<tr><th>Name</th><th>Description</th></tr>		
 		{{#each project}}
-		<tr class="table-data">
-		<!--<td><div class="container-fluid project-div"  style="width:390px; display:inline-block; margin:10px;">
-				</td>-->
-			
-				<td><a class="projectdetailbtn" data-id="{{@index}}" href="#"><h4>{{name}}</h4></a></td>
+		<tr class="table-data projectdetailbtn" data-id="{{@index}}" href="#">
+				<td><h4>{{name}}</h4></td>
 				<td><p>{{details}}</p></td>
-			</div></tr>
+			</div></tr></button>
 		{{/each}}
 </table>		
 </div>
@@ -111,6 +110,10 @@
       
 <!--PROJECT DETAIL TEMPLATE-->
       <script id="project-detail-template" type="text/x-handlebars-template">
+			<ul class="breadcrumb">
+		  <li role="" class="projectsbtn"><a href="#" >Projects</a></li>
+		  <li>Project Details</li>
+		</ul>
 		   <div id="project-detail-page">
 			   <h3> Project Details</h3>
                <h4> {{name}}</h4>

@@ -107,6 +107,15 @@ function ToggleBlogTOC(){
                      $(".projectdetailbtn").click(function(){
                         var index = $(this).data("id");
 				        showProject(index);
+						
+						$(".projectsbtn").click(function(){
+						
+							projectPage();
+						});
+						
+						
+						
+						
                         });
              });
     });
@@ -142,5 +151,25 @@ function ToggleBlogTOC(){
     $(".sidebar-right").hide();
         
     };
+	
+	function projectPage(){
+		 var html= projects_template(projects);
+                $("#content").html(html);    
+                 $(".navbar-nav .active").removeClass("active");
+                $(".projectsbtn").addClass("active");
+				
+				   $(".projectdetailbtn").click(function(){
+                        var index = $(this).data("id");
+				        showProject(index);
+						
+						$(".projectsbtn").click(function(){
+						
+							projectPage();
+						});
+    
+		});
+		
+		};
+	
 });
 
