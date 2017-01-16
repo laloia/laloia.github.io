@@ -344,6 +344,10 @@ div#project-detail-page img{
     border:1px solid #acacac;
 }
 
+div#project-detail-page h4,p{
+text-align:left;
+}
+
 
 
 

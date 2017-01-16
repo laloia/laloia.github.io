@@ -131,6 +131,26 @@
                {{#if img5}}
                <img src="{{img5}}"/>
                {{/if}}
+			   {{#if overview}}
+			   <h4> Project Overview</h4>
+			   <p>{{overview}}
+			   {{/if}}
+			   {{#if research}}
+			   <h4> Research</h4>
+			   <p>{{research}}
+			   {{/if}}
+			   {{#if development}}
+			   <h4> Development</h4>
+			   <p>{{development}}
+			   {{/if}}
+			   {{#if testing}}
+			   <h4> Testing</h4>
+			   <p>{{testing}}
+			   {{/if}}
+			   {{#if documentation}}
+			   <h4> Documentation</h4>
+			   <p>{{documentation}}
+			   {{/if}}
                {{#if downloadable}}
               <br/> <a target="_blank" href="{{downloadable}}">Click to view the original project proposal</a>
                {{/if}}
