@@ -49,7 +49,8 @@ var projects ={
             name: "ERAS App for Patients",
             details:"Emory's Enhanced Recovery After Surgery (ERAS) app for patients recovering from colon surgery. Built with Ionic framework.",
             downloadable2:"files/Presentation.pdf",
-            downloadable3:"files/Eras_manual.pdf"
+            downloadable3:"files/Eras_manual.pdf",
+			downloadable4:"files/ERAS_wireframes.pdf"
             
             
         }

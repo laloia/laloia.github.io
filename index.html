@@ -122,15 +122,19 @@
 			   <h3> Project Details</h3>
                <h4 class="detail-title"> {{name}}</h4>
                <p class="detail-title">{{details}}</p>
+			    {{#if downloadable4}}
+              <a target="_blank" href="{{downloadable4}}"><p style="font-size:20px;text-align:center;">View the ERAS wireframes</p></a>
+               {{/if}}
 			    {{#if downloadable}}
-               <a target="_blank" href="{{downloadable}}"><p style="font-size:20px;text-align:center;">Click to view the original project proposal</p></a>
+               <a target="_blank" href="{{downloadable}}"><p style="font-size:20px;text-align:center;">View the original project proposal</p></a>
                {{/if}}
 			    {{#if downloadable2}}
-              <a target="_blank" href="{{downloadable2}}"><p style="font-size:20px;text-align:center;">Click to view the project presentation</p></a>
+              <a target="_blank" href="{{downloadable2}}"><p style="font-size:20px;text-align:center;">View the project presentation</p></a>
                {{/if}}
                 {{#if downloadable3}}
-              <a target="_blank" href="{{downloadable3}}"><p style="font-size:20px;text-align:center;">Click to view the ERAS manual</p></a>
+              <a target="_blank" href="{{downloadable3}}"><p style="font-size:20px;text-align:center;">View the ERAS manual</p></a>
                {{/if}}
+			    
                <img src="{{img}}"/><br/>
                {{#if img2}}
                <img src="{{img2}}"/> 
