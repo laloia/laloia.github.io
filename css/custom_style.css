@@ -195,6 +195,19 @@ div#skills ul{
     font-family: "Lato";
 }
 
+#skillgrid li p{
+    font-size: 13px;
+    margin:auto;
+    color:black;
+    text-align: center;
+    font-family: "Lato";
+}
+
+.list-group li p{
+text-align:center;
+padding-bottom:10px;
+}
+
 #skillgrid li img{
     height:50px;
     
@@ -369,6 +382,8 @@ text-align:center;
 }
 
 
+
+
 /**Blog CSS**/
 
 
@@ -485,13 +500,15 @@ center#main{
 
 }
 
+
+
 }
 
 
 
 
-@media only screen and (min-width: 900px){
-div#project-div img#project-img, p, h4{
+ @media only screen and (min-width: 900px){
+div#project-div img#project-img, div#project-div p, div#project-div h4{
 width:80%; 
 margin:auto;
 max-width:400px;
@@ -509,7 +526,9 @@ max-width:400px;
 
 
 
-}
+
+
+} 
 
 
 

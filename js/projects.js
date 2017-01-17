@@ -22,7 +22,9 @@ var projects ={
 		img2: "images/gitbook2.png",
 		img3: "images/gitbook3.png",
         name: "e-Books Created With Gitbook", 
-        details: "Project management, content creation, Markdown/HTML/CSS/JavaScript", 
+        details: "Project management, content creation, Markdown/HTML/CSS/JavaScript",
+		overview:"This is an e-book developed and published for The Society of Thoracic Surgeons (STS). I acted as the project manager and developer for this project. I used GitBook, an open source platform for digital writing and publishing, to host and publish the book.",
+		development:"GitBook requires use of Markdown, HTML, CSS and Javascript. I developed a general outline for the 200+ chapters, as well as various standards including text size and font, file and image naming, spacing, and table styling to ensure the chapters were consistent and cohesive.", 	
        
     
         },{

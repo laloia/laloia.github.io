@@ -122,6 +122,15 @@
 			   <h3> Project Details</h3>
                <h4 class="detail-title"> {{name}}</h4>
                <p class="detail-title">{{details}}</p>
+			    {{#if downloadable}}
+               <a target="_blank" href="{{downloadable}}"><p style="font-size:20px;text-align:center;">Click to view the original project proposal</p></a>
+               {{/if}}
+			    {{#if downloadable2}}
+              <a target="_blank" href="{{downloadable2}}"><p style="font-size:20px;text-align:center;">Click to view the project presentation</p></a>
+               {{/if}}
+                {{#if downloadable3}}
+              <a target="_blank" href="{{downloadable3}}"><p style="font-size:20px;text-align:center;">Click to view the ERAS manual</p></a>
+               {{/if}}
                <img src="{{img}}"/><br/>
                {{#if img2}}
                <img src="{{img2}}"/> 
@@ -137,33 +146,26 @@
                {{/if}}
 			   {{#if overview}}
 			   <h4> Project Overview</h4>
-			   <p>{{overview}}
+			   <p>{{overview}}</p>
 			   {{/if}}
 			   {{#if research}}
 			   <h4> Research</h4>
-			   <p>{{research}}
+			   <p>{{research}}</p>
 			   {{/if}}
 			   {{#if development}}
 			   <h4> Development</h4>
-			   <p>{{development}}
+			   <p>{{development}}</p>
 			   {{/if}}
 			   {{#if testing}}
 			   <h4> Testing</h4>
-			   <p>{{testing}}
+			   <p>{{testing}}</p>
 			   {{/if}}
 			   {{#if documentation}}
 			   <h4> Documentation</h4>
-			   <p>{{documentation}}
+			   <p>{{documentation}}</p>
 			   {{/if}}
-               {{#if downloadable}}
-              <br/> <a target="_blank" href="{{downloadable}}">Click to view the original project proposal</a>
-               {{/if}}
-               {{#if downloadable2}}
-               <br/><a target="_blank" href="{{downloadable2}}">Click to view the project presentation</a>
-               {{/if}}
-                {{#if downloadable3}}
-               <br/><a target="_blank" href="{{downloadable3}}">Click to view the ERAS manual</a>
-               {{/if}}
+              
+              
 		   </div>
       </script>
       
@@ -206,7 +208,6 @@
    <center id="main">
        <div id="main_title">
 			<h1>I am Lauren.</h1><br/>
-           <!-- <img src="images/cover4.jpeg" alt=""/>-->
             <h4>A web designer & developer</h4>    <br/>
        <a class="aboutbtn main-button" href="index.html#aboutlauren" role="button" ><div class="main-button">&nbsp;Read More&nbsp;&nbsp;</div></a>
     </div> </center>
@@ -230,7 +231,7 @@
 <script id="resume-template" type="text/x-handlebars-template">     
 <div id="resume" class="body">
 
-    <h3>Resume: Lauren Aloia </h3>
+    <h3>My Resume</h3>
    
 		<div class="panel-group" id="accordion">
 		    <div class="panel panel-default">
@@ -263,6 +264,8 @@
                                 <li class="list-group-item"><img src="images/excel.jpg"/><p>Microsoft Excel</p></li>
                                 <li class="list-group-item"><img src="images/powerpoint.jpg"/><p>Powerpoint</p></li>
                                 <li class="list-group-item"><img src="images/adobe.png"/><p>Adobe</p></li>
+								<li class="list-group-item"><img src="images/grails.png"/><p>Grails</p></li>
+								<li class="list-group-item"><img src="images/groovy.png"/><p>Groovy</p></li>
                   
                                 </ul>
                             </div>
