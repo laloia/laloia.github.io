@@ -157,10 +157,10 @@ ul#mynavcss li{
 /**Resume CSS**/
 
 div#resume h3{
-    font-family:"petit formal script";
+    
     font-weight: 90;
-    font-size:20px;
     padding:10px;
+	
     
 }
 
@@ -271,16 +271,29 @@ div#education li, div#experience li, div#certifications li{
 /*Projects CSS*/
 
 div#projects-page h3{
-	font-family:"petit formal script";
-	text-align:center;
+	
+	text-align:left;
 	padding-bottom:15px;
 }
-img.proj-img{
-text-align: center;
-height:238px; 
-width:350px; 
-border-radius:10px; 
-box-shadow: 10px 5px 5px #888888;
+
+ div#project-div{
+ width:100%; 
+ text-align:center; 
+ margin-bottom:30px;
+ margin-top:10px;
+
+}
+
+img#project-img{
+width:50%; 
+margin:auto; 
+border:solid 1px black;
+
+}
+
+div#project-div p{
+text-align:center;
+
 }
 
 div.project-div h4{
@@ -334,7 +347,7 @@ div#project-detail-page{
 }
 
 div#project-detail-page h3{
-	font-family:"petit formal script";
+	/*font-family:"petit formal script";*/
 	text-align:center;
 }
 
@@ -344,12 +357,16 @@ div#project-detail-page img{
     border:1px solid #acacac;
 }
 
-div#project-detail-page h4,p{
+
+
+div#project-detail-page h4, p{
 text-align:left;
 }
 
 
-
+div#project-detail-page h4.detail-title, p.detail-title{
+text-align:center;
+}
 
 
 /**Blog CSS**/
@@ -467,11 +484,42 @@ center#main{
     background-position: top;  
 
 }
- 
+
 }
 
 
+
+
+@media only screen and (min-width: 900px){
+div#project-div img#project-img, p, h4{
+width:80%; 
+margin:auto;
+max-width:400px;
+
+
+}
+ div#project-div{
+ width:45%; 
+ height:400px;
+ float:left;
+ text-align:center;
+
+}
+
+
+
+
+}
+
+
+
 @media only screen and (max-width: 550px) {
+
+img#project-img{
+width:90%; 
+
+}
+
     
     #posts{
 position:fixed;

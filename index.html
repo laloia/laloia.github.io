@@ -50,7 +50,7 @@
          id="main_navbar">
         <ul class="nav navbar-nav navbar-right" id="mynavcss" >
           <li role="" class="active" id="home-page"><a href="#">Home</a></li>
-          <li role="" id="cvbtn"><a href="#">CV</a></li>
+          <li role="" id="cvbtn"><a href="#">Resume</a></li>
           <li role="" class="projectsbtn"><a href="#" >Projects</a></li>
 		 <!-- <li role="" id="blogbtn"><a href="#">Blog</a></li>-->
         </ul>
@@ -97,14 +97,18 @@
 			<h3> Projects</h3>
 		</div>
 <div>
-<table>	<tr><th>Name</th><th>Description</th></tr>		
-		{{#each project}}
-		<tr class="table-data projectdetailbtn" data-id="{{@index}}" href="#">
-				<td><h4>{{name}}</h4></td>
-				<td><p>{{details}}</p></td>
-			</div></tr></button>
-		{{/each}}
-</table>		
+
+{{#each project}}
+	<div id="project-div">
+		<h4>{{name}}</h4>
+		<p>{{details}}</p>
+		<img id="project-img" src="{{img}}"/><br/>
+		<a class="projectdetailbtn" data-id="{{@index}}" href="#">Learn more</a>
+	
+	</div>
+
+{{/each}}
+
 </div>
       </script>
       
@@ -116,8 +120,8 @@
 		</ul>
 		   <div id="project-detail-page">
 			   <h3> Project Details</h3>
-               <h4> {{name}}</h4>
-               <p>{{details}}</p>
+               <h4 class="detail-title"> {{name}}</h4>
+               <p class="detail-title">{{details}}</p>
                <img src="{{img}}"/><br/>
                {{#if img2}}
                <img src="{{img2}}"/> 
@@ -226,7 +230,7 @@
 <script id="resume-template" type="text/x-handlebars-template">     
 <div id="resume" class="body">
 
-    <h3>Lauren Aloia's Resume </h3>
+    <h3>Resume: Lauren Aloia </h3>
    
 		<div class="panel-group" id="accordion">
 		    <div class="panel panel-default">
