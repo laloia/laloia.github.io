@@ -1,7 +1,12 @@
 var projects ={
     
     project:[
-    
+            {
+		img: "images/stephanos.png",
+        name: "Custom Squarespace website for an Italian Restaurant",  
+        website: "https://www.stephanospizzawinfield.com",
+        overview:"Live website at https://www.stephanospizzawinfield.com"
+        },
         {
 		img: "images/lms.png",
 		img2:"images/lms2.png",
