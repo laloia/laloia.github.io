@@ -3,7 +3,8 @@ var projects ={
     project:[
             {
 		img: "images/stephanos.png",
-        name: "Custom Squarespace website for an Italian Restaurant",  
+        name: "Custom website for an Italian Restaurant",
+        details: "SquareSpace",
         website: "https://www.stephanospizzawinfield.com",
         overview:"Live website at https://www.stephanospizzawinfield.com"
         },
@@ -26,7 +27,7 @@ var projects ={
 		img: "images/gitbook.png",
 		img2: "images/gitbook2.png",
 		img3: "images/gitbook3.png",
-        name: "e-Books Created With Gitbook", 
+        name: "e-Books created on the GitBook platform", 
         details: "Project management, content creation, Markdown/HTML/CSS/JavaScript",
 		overview:"This is an e-book developed and published for The Society of Thoracic Surgeons (STS). I acted as the project manager and developer for this project. I used GitBook, an open source platform for digital writing and publishing, to host and publish the book.",
 		development:"GitBook requires use of Markdown, HTML, CSS and Javascript. I developed a general outline for the 200+ chapters, as well as various standards including text size and font, file and image naming, spacing, and table styling to ensure the chapters were consistent and cohesive.", 	
@@ -39,7 +40,8 @@ var projects ={
             img3:"images/assessmentshare4.png",
             img4:"images/assessmentshare3.png",
             name: "Assessment Share- A Groovy/Grails Web Application",
-            details:"A collaboration tool prototype that allows educators to share and rate assessment questions.",
+            details:"A collaboration tool prototype for educators to share and rate assessment questions.",
+            overview:"I created this web app for my Educational Technology class. I wrote the backend in Java/Groovy/Grails and used the GORM framework for my database. Users can log into the site and perform basic CRUD operations." , 
             downloadable:"files/Proposal.pdf"
             
             

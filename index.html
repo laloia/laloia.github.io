@@ -100,11 +100,13 @@
 
 {{#each project}}
 	<div id="project-div">
-		<h4>{{name}}</h4>
+		<div id="project-name">
+        <h4>{{name}}</h4>
 		<p>{{details}}</p>
         {{#if website}}
-              <a target="_blank" href="{{website}}"><p style="font-size:20px;text-align:center;">View live website.</p></a>
+              <a target="_blank" href="{{website}}"><p style="font-size:16px;text-align:center;">View live website.</p></a>
           {{/if}}
+          </div>
         <a class="projectdetailbtn" data-id="{{@index}}" href="#"><img id="project-img" src="{{img}}"/></a><br/>
 		<a class="projectdetailbtn" data-id="{{@index}}" href="#">Learn more</a>
 	

@@ -297,10 +297,17 @@ div#projects-page h3{
 
 }
 
+div#project-name{
+height:90px;
+    
+}
+
 img#project-img{
-width:50%; 
+width:50%;
+height:50%;
 margin:auto; 
 border:solid 1px black;
+
 
 }
 
@@ -587,7 +594,8 @@ width:90%;
     
     img.proj-img{
         text-align: center;
-        width:90%; 
+        width:90%;
+        
 
 }
 
